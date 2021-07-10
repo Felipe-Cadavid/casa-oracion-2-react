@@ -1,0 +1,32 @@
+* p{
+    font-size: 18px;
+}
+
+* a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #FECA64;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Akaya Kanadaka', cursive; */
+    /* font-family: 'Caveat', cursive; */
+    font-family: 'Lora', serif;
+}
+
+iframe{
+    border: 0;
+}
+
+@keyframes fadein{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.red{
+    font-weight: bold;
+    color: #700201
+}
+

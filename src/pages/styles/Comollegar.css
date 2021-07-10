@@ -1,0 +1,42 @@
+.instructions{
+    width: 100%;
+    background-color: #FECA64;
+}
+
+.instructions iframe{
+    width: 100%;
+    height: 70vw;
+}
+
+.instructions__description{
+    padding: 10px;
+    font-weight: bold;
+}
+
+.instructions__map{
+    width: 100%;
+    /* margin: 10px; */
+}
+
+@media only screen and (min-width: 1095px){
+    .instructions{
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instructions iframe{
+        width: 90%;
+        height: 400px;
+        margin-top: 40px;
+    }
+
+    .instructions__description{
+        width: 90%;
+    }
+    .instructions__map{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+}

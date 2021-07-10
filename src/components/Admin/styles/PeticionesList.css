@@ -1,0 +1,62 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.petition-container{
+    background-color: #FECA64;
+    display: flex;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.petition-data{
+    gap: 8px;
+    font-size: 25px;
+}
+
+.petition-controls{
+    font-size: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.button__copy{
+    color: white;
+    cursor: pointer;
+    height: 20px;
+}
+
+.button__copy:hover{
+    color: black;
+}
+
+.button__delete{
+    color: red;
+    cursor: pointer;
+    height: 20px;
+}
+
+.button__delete:hover{
+    color: rgb(165, 0, 0);
+}
+
+
+div > span{
+    font-weight: bold;
+}
+
+.loader-container{
+    display: flex;
+    height: calc(100vh - 400px);
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 1095px){
+.petition-container{
+    width: 60vw;
+}
+}

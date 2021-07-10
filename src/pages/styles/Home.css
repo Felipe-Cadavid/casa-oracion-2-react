@@ -1,0 +1,254 @@
+.main{
+    background-color: #700201;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.main__verseofday{
+    background-color: #FECA64;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.verseofday__verse-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.verseofday__verse-text{
+    font-size: 18px;
+}
+
+.welcome{
+    background-color: #FECA64;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    /* margin: 60px 0; */
+}
+
+.services{
+    background-color: #FECA64;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.services__title{
+    text-align: center;
+}
+
+.services__service{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.service__img{
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.service__link{
+    font-weight: bold;
+    color: white;
+}
+
+.pageitems-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FECA64;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.peticiones-article{
+    margin: 10px 0;
+}
+
+.peticiones-image{
+    background: url('../../assets/peticion.jpeg');
+    background-size: contain;
+    height: 70vw;
+    width: 70vw;
+}
+
+.peticiones-button{
+    user-select: none;
+    margin: 5px 0;
+    padding: 15px;
+    text-align: center;
+    background: #700201;
+    color: white;
+    transition: 0.2s;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.peticiones-button:hover{
+    cursor: pointer;
+    background: #e7cc99;
+}
+
+.programacion-article{
+    margin: 10px 0;
+}
+
+.programacion-image{
+    background: url('../../assets/programacion.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vw;
+    width: 70vw;
+}
+
+.programacion-button{
+    user-select: none;
+    margin: 5px 0;
+    padding: 15px;
+    text-align: center;
+    background: #700201;
+    color: white;
+    transition: 0.2s;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.programacion-button:hover{
+    cursor: pointer;
+    background: #e7cc99;
+}
+
+.comollegar-article{
+    margin: 10px 0;
+}
+
+.comollegar-image{
+    height: 70vw;
+    width: 70vw;
+}
+
+.comollegar-image iframe{
+    height: 70vw;
+    width: 70vw;
+}
+
+.comollegar-button{
+    user-select: none;
+    margin: 5px 0;
+    padding: 15px;
+    text-align: center;
+    background: #700201;
+    color: white;
+    transition: 0.2s;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.comollegar-button:hover{
+    cursor: pointer;
+    background: #e7cc99;
+}
+
+.social{
+    background-color: #FECA64;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.social__items-container{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    font-size: 40px;
+}
+
+.social__desc{
+    padding: 5px;
+    text-align: center;
+} 
+
+.social__item{
+    color: white;
+}
+
+.social__item:hover{
+    color: #4C0100;
+}
+
+@media only screen and (min-width: 1095px){
+    .main{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .main section{
+        width: 60vw;
+    }
+    .services__container{
+        display: flex;
+    }
+
+    .services__container hr{
+        display: none;
+        /* color: #700201; */
+    }
+
+    .services__service{
+        width: 40%;
+        margin: 0 10px;
+    }
+
+    .pageitems-container{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .peticiones-image{
+        width: 19vw;
+        height: 19vw;
+    }
+
+    .programacion-image{
+        width: 19vw;
+        height: 19vw;
+    }
+
+    .comollegar-image{
+        width: 19vw;
+        height: 19vw;
+    }
+
+    .comollegar-image iframe{
+        width: 19vw;
+        height: 19vw;
+    }
+
+    .social__items-container{
+        justify-content: center;
+    }
+
+    .social__items-container a{
+        margin: 0 10px;
+    }
+
+    .social__item{
+        font-size: 50px;
+    }
+
+}

@@ -1,0 +1,21 @@
+.modal-delete__buttons-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-delete__delete-button, .modal-delete__cancel-button{
+    width: 45%;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    background: #700201;
+    color: white;
+    transition: background-color 0.2s;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.modal-delete__delete-button:hover, .modal-delete__cancel-button:hover{
+    background: #e7cc99;
+    color: black;
+}
