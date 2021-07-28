@@ -9,21 +9,26 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 function Navbar(){
     const [ isCollapsed, setIsCollapsed ] = React.useState(false);
 
+    function determineCollapse(width = window.innerWidth){
+        if(width > 800) setIsCollapsed(true);
+    }
     React.useEffect(() => {
-        if(window.innerWidth > 800) setIsCollapsed(true);
+        determineCollapse();
     }, []);
 
     const menu = (
         <>
             <Link to='/'>
-                <li tabIndex="0" className="navbar--item">Inicio</li>
+                <li data-testid="navbar__item" tabIndex="0" className="navbar--item">Inicio</li>
             </Link>
             <span className="navbar__division-row">|</span>
 
             <li tabIndex="0" className="navbar--item">Quiénes somos</li>
             <span className="navbar__division-row">|</span>
             
-            <li tabIndex="0" className="navbar--item">Biblia</li>
+            <a href="https://www.bible.com/es/bible/149/GEN.1.RVR1960" rel="noreferrer" target="_blank">
+                <li tabIndex="0" className="navbar--item">Biblia</li>
+            </a>
             <span className="navbar__division-row">|</span>
             
             <Link to='/peticiones'>
@@ -42,7 +47,7 @@ function Navbar(){
             <li tabIndex="0" className="navbar--item">Nuestra programación</li>
             <span className="navbar__division-row">|</span>
 
-            <Link to='/cursos'>
+            <Link to='/instituto'>
                 <li tabIndex="0" className="navbar--item">Instituto Bíblico</li>
             </Link>
             <span className="navbar__division-row">|</span>
@@ -57,7 +62,7 @@ function Navbar(){
     
     return(
         <nav className="navbar">
-            <button onClick={handleClick} aria-label="Botón de menú" className="navbar__button" type="button"><FontAwesomeIcon icon={faBars}></FontAwesomeIcon></button>
+            <button data-testid="navbar__button" onClick={handleClick} aria-label="Botón de menú" className="navbar__button" type="button"><FontAwesomeIcon icon={faBars}></FontAwesomeIcon></button>
             <ul className="navbar__list">
                 {isCollapsed && menu}
             </ul>

@@ -1,0 +1,19 @@
+.TODOS-container{
+    width: 300px;
+    /* height: 300px; */
+    position: fixed;
+    background-color: #000000aa;
+    z-index: 20;
+    color: white;
+    border-radius: 10px;
+    bottom: 0;
+}
+
+.TODOS-list li{
+    margin: 8px 0;
+}
+
+.done{ 
+    text-decoration: line-through;
+    font-style: italic;
+}

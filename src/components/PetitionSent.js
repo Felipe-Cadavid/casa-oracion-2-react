@@ -15,10 +15,10 @@ function PetitionSent(props){
                 <p className="request-sent__p">Estaremos orando por tu petición</p>
                 <p className="request-sent__p">Dios te bendiga</p>
                 <div className="buttons-container">
-                    <Link to="/">
-                        <div className="button-inicio">Inicio</div>
+                    <Link tabIndex="-1" to="/">
+                        <button tabIndex="0" className="button-inicio">Inicio</button>
                     </Link>
-                    <div onClick={handleClick} className="button-request">Hacer otra petición</div>
+                    <button onClick={handleClick} tabIndex="0" className="button-request">Hacer otra petición</button>
                 </div>
             </section>
         </main>

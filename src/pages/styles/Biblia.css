@@ -1,0 +1,22 @@
+.bible-section{
+    background-color: #FECA64;
+    border: 1px solid black;
+    min-height: calc(100vh - 390px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bible__title{
+}
+
+.bible-iframe-container{
+    width: 100%;
+    height: 100vh;
+}
+
+.bible__iframe{
+    width: 100%;
+    height: 100%;
+    color: violet;
+}

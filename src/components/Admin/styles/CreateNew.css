@@ -1,0 +1,143 @@
+.createNew-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: #feca64;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.createNew__preview{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.createNew__title{
+    text-align: center;
+}
+
+.preview__text-container{
+    padding: 10px;
+}
+
+.preview__text{
+    word-wrap: break-word;
+}
+
+.preview__image{
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.createNew__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.createNew__form fieldset{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 5px;
+    border: none;
+}
+
+.createNew__text-input{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.createNew__text-input{
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.createNew__back-button{
+    position: static;
+    margin-bottom: 20px;
+    
+}
+
+.createNew__main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.createNew__back-button{
+    font-size: 30px;
+    user-select: none;
+    color: #700201;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.createNew__back-button:hover{
+    color: #4C0100;
+}
+
+.createNew__submit-button{
+    width: 80%;
+    margin: auto;
+    height: 30px;
+    user-select: none;
+    background: #700201;
+    color: white;
+    transition: background-color 0.2s;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.createNew__submit-button:hover{
+    cursor: pointer;
+    background: #e7cc99;
+    color: black;
+}
+
+.bar-loader-container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.loading-bar-container{
+    background-color: lightgray;
+    width: 200px;
+    height: 10px;
+    display: inline-block;
+}
+
+.loading-bar{
+    background-color: #700201;
+    height: 10px;
+    width: 0;
+}
+
+
+@media only screen and (min-width: 1095px){
+    .createNew-container{
+        width: 60vw;
+        justify-content: space-between;
+    }
+    .createNew__main-container{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .createNew__form-container{
+        width: 100%;
+        align-items: center;
+    }
+
+    .createNew__form{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+
+}

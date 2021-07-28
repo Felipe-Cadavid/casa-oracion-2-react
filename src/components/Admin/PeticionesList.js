@@ -1,10 +1,12 @@
 import React from 'react';
-import firebase from 'firebase';
 import DeletePetitionModal from '../DeletePetitionModal';
 import Loader from '../Loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
+import getPetitions from '../../util/getPetitions';
+import deletePetition from '../../util/deletePetition';
 
 import './styles/PeticionesList.css'
 
@@ -14,14 +16,13 @@ function PeticionesList(){
     const [isOpen, setIsOpen] = React.useState(false);
     const [modalElement, setModalElement] = React.useState({});
     var petitions = [];
-    const db = firebase.firestore();
 
     React.useEffect(() => {
         getData();
     },[])
 
     const getData = ()=> {
-        db.collection("petitions").get()
+        getPetitions()
         .then(query => {
             petitions = [];
             query.forEach(query => {
@@ -34,21 +35,7 @@ function PeticionesList(){
             })
             setState(petitions);
             setLoading(false);
-            // setTimeout(() => {
-            //     console.log("TIMEOUT")
-            //     getData();
-            // }, 10000)
         })
-    }
-
-    function deletePetition(petition){
-        return db.collection("petitions").doc(petition).delete()
-            .then(() => {
-              console.log(`Peticion con id ${petition} borrada correctamente`)  
-            })
-            .catch(error => {
-              console.log(`Error al borrar peticion ${petition}, Error: ${error}`)
-            })
     }
 
     function handleClick(element, e) {
@@ -63,13 +50,15 @@ function PeticionesList(){
                 break;
             case "modal-delete__delete-button":
                 setLoading(true);
+                console.log(element)
                 deletePetition(element.id)
-                .then(() => {
-                    getData();
-                })
-                .catch(err => {
-                    console.log(`Error en handleclick: ${err}`)
-                })
+                    .then(() => {
+                        setIsOpen(false);
+                        getData();
+                    })
+                    .catch(err => {
+                        console.log(`Error en handleclick: ${err}`)
+                    })
                 break;
             case "modal-delete__cancel-button":
                 setIsOpen(false);
@@ -78,7 +67,6 @@ function PeticionesList(){
                 setIsOpen(false); 
                 break;
             default:
-                console.log('difol')
         }
     }
 
@@ -122,8 +110,12 @@ function PeticionesList(){
                             </div>
                         )
                     })}
-                </>
-                
+                    {state.length === 0 &&
+                        <div className="no-petitions">
+                            <h3 className="no-petitions__text">No hay peticiones por el momento.</h3>
+                        </div>
+                    }
+                </>    
             }
         </>
     );

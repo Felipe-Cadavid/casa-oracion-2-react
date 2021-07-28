@@ -1,3 +1,47 @@
 .main{
     min-height: calc(100vh - 390px);
 }
+
+.admin-buttons-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.admin__button{
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+    margin: 5px 0;
+    padding: 15px;
+    text-align: center;
+    background: #feca64;
+    color: black;
+    transition: background-color 0.2s;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.admin__button:hover{
+    background-color: #4C0100;
+    color: white;
+}
+
+.control-panel-container{
+    background-color: #feca64;
+    width: 100%;
+    min-height: calc(100vh - 390px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.control-panel__image{
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}

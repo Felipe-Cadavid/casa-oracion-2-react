@@ -93,7 +93,7 @@ body{
     border: 1px solid black;
     padding: 20px 0;
     margin-bottom: 20px;
-    height: 20vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

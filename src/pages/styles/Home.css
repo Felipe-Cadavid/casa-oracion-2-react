@@ -7,7 +7,7 @@
 }
 
 .main__verseofday{
-    background-color: #FECA64;
+    background-color: #feca64;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid black;
@@ -23,7 +23,7 @@
 }
 
 .welcome{
-    background-color: #FECA64;
+    background-color: #feca64;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid black;
@@ -32,7 +32,7 @@
 }
 
 .services{
-    background-color: #FECA64;
+    background-color: #feca64;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid black;
@@ -55,14 +55,23 @@
 
 .service__link{
     font-weight: bold;
-    color: white;
+    color: #feca64;
+}
+
+.news{
+    background-color: #feca64;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    height: 40vh;
+    overflow-y: auto;
 }
 
 .pageitems-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FECA64;
+    background-color: #feca64;
     border: 1px solid black;
     margin-bottom: 15px;
     padding: 10px;
@@ -157,7 +166,7 @@
 }
 
 .social{
-    background-color: #FECA64;
+    background-color: #feca64;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -205,7 +214,6 @@
 
     .services__container hr{
         display: none;
-        /* color: #700201; */
     }
 
     .services__service{

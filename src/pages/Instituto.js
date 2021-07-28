@@ -1,11 +1,34 @@
 import React from 'react';
+
 import Layout from '../components/Layout';
+import InstitutoRecursos from '../components/InstitutoRecursos';
+
+import './styles/Instituto.css';
 
 function Instituto(){
+    const [tab, setTab] = React.useState('Instituto');
+
+    function handleClick(e){
+        setTab(e.target.outerText);
+    }
+
     return(
         <Layout>
-            <h1>Instituto</h1>
-            {/* TODO: Crear la página del instituto e integrarla con Firebase */}
+            <main className="main">
+                <nav className="instituto__nav">
+                    <ul className="instituto__nav-list">
+                        <li onClick={handleClick} className="instituto__nav__recursos">Recursos</li>
+                    </ul>
+                </nav>
+
+                {
+                tab === "Instituto" ?
+                    <div>Instituto</div>
+                    :
+                tab === "Recursos" &&
+                    <InstitutoRecursos />
+                }
+            </main>
         </Layout>
     )
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import firebase from 'firebase';
 import Loader from './Loader';
+import getVerses from '../util/getVerses';
 
-function VerseOfDay(){
+
+function VerseOfDay({database}){
     const [verseTitle, setVerseTitle] = React.useState("")
     const [verseText, setVerseText] = React.useState("")
-    const [verseId, setVerseId] = React.useState();
     const [loading, setLoading] = React.useState(true);
 
     function generateRandomVerseId(numberOfVerses) {
@@ -16,30 +16,23 @@ function VerseOfDay(){
         const holdrand3 = Math.sin(holdrand2 + 1) * 1000;
         return Math.floor((holdrand3 - Math.floor(holdrand3)) * (numberOfVerses));
     }
-    
-    const db = firebase.firestore();
-    db.collection('verses').get()
-    .then(query => {
-        setTimeout(()=> {
-            setVerseId(generateRandomVerseId(query.size - 1));
-        }, 500)
-    })
-    .catch(error => {
-        console.error(`Error: ${error}`);
-    })
 
-    if(verseId != null){
-        db.collection('verses').doc(verseId.toString()).get()
-    .then(query => {
-        setVerseTitle(query.data().verse);
-        setVerseText(query.data().text);
-        setLoading(false);
-    })
-    .catch(error => {
-        console.error(`Error: ${error}`);
-    })
-    }
-    
+    React.useEffect(() => {
+        getVerses()
+        .then(query => {
+            setTimeout(()=> {
+                const verseId = generateRandomVerseId(query.size - 1);
+                const verse = query.docs[verseId];
+                setVerseTitle(verse.data().verse);
+                setVerseText(verse.data().text);
+                setLoading(false);
+            }, 500)
+        })
+        .catch(error => {
+            console.error(`Error: ${error}`);
+        })
+    }, []);
+
 
     return(
         <section className="main__verseofday">

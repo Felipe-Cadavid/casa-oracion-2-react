@@ -1,0 +1,80 @@
+.news-controller__new{
+    display: flex;
+    width: 100%;
+    background-color: #feca64;
+    border: 1px solid black;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.createnew-button-container{
+    display: flex;
+    width: 60vw;
+    /* justify-content: flex-end; */
+}
+
+.createnew-button{
+        width: 200px;
+        height: 50px;
+        cursor: pointer;
+        user-select: none;
+        margin: 5px 0;
+        padding: 15px;
+        text-align: center;
+        background: #feca64;
+        color: black;
+        transition: background-color 0.2s;
+        font-weight: bold;
+        border: 1px solid black;
+    }
+    
+.createnew-button:hover{
+        background-color: #4C0100;
+        color: white;
+}
+
+.new__image-container{
+    padding: 0;
+}
+
+.new__image-container__image{
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.new__text-container{
+    padding: 0 10px;
+    width: 100%;
+}
+
+.new__text{
+    height: 24px;
+    overflow-y: hidden;
+
+}
+
+.new__controls-container{
+    display: flex;
+    font-size: 30px;
+    gap: 15px;
+    margin: 10px;
+}
+
+.no-news{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 400px);
+}
+
+.no-news__text{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1095px){
+    .news-controller__new{
+        width: 60vw;
+    }
+}

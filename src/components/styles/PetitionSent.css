@@ -52,7 +52,7 @@ body{
 
 @media only screen and (min-width: 1095px){
     .request-sent{
-        height: calc(100vh - 470px);
+        min-height: calc(100vh - 470px);
     }
     .buttons-container{
         flex-direction: row;

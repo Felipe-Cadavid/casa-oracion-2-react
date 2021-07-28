@@ -17,7 +17,7 @@ function PeticionesController(){
     }
 
     const handleClick = e =>{
-        if(name != "" && petition != ""){
+        if(name !== "" && petition !== ""){
             e.preventDefault();
             setLoading(true);
             crearPeticion(name, petition)

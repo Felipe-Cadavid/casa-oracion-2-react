@@ -48,10 +48,10 @@ function Peticiones(props){
 
                 <section className="whatsapp">
                     <div className="whatsapp__title">
-                        <img className="whatsapp__img" src={WhatsappLogo} aria-hidden="true" />
+                        <img className="whatsapp__img" src={WhatsappLogo} aria-hidden="true" alt="Whatsapp Logo" />
                         <p>También puedes hacernos tu petición a través de WhatsApp si deseas.</p>
                     </div>
-                    <a className="whatsapp__button" href="https://api.whatsapp.com/send?phone=573103636920&text=Hola,%20deseo%20hacer%20una%20petici%C3%B3n%20de%20oraci%C3%B3n." target="_blank">Haz click aquí</a>
+                    <a className="whatsapp__button" href="https://api.whatsapp.com/send?phone=573103636920&text=Hola,%20deseo%20hacer%20una%20petici%C3%B3n%20de%20oraci%C3%B3n." rel="noreferrer" target="_blank">Haz click aquí</a>
                 </section>
             </main>
             }
