@@ -44,7 +44,7 @@
 }
 
 
-div > span{
+.petition__name > span, .petition__text > span{
     font-weight: bold;
 }
 

@@ -1,0 +1,31 @@
+.institute__resource-section{
+    display: flex;
+    justify-content: space-around;
+    background-color: #feca64;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.institute__resource-name{
+    margin: 0;
+    font-size: 25px;
+}
+
+.institute__resource-meta-container{
+    display: flex;
+    gap: 5px;
+}
+
+.institute__resource-buttons-container{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.institute__resource-download-button, .institute__resource-view-button{
+    height: 50px;
+    width: 180px;
+    font-size: 30px;
+}

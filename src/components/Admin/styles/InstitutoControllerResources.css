@@ -1,0 +1,54 @@
+.admin-resource-container{
+    /* height: 150px; */
+    background-color: #8a0200;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-resource-text-container{
+
+}
+
+.admin-resource-create{
+    padding: 20px;
+    background-color: #8a0200;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    border: 1px solid black;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color .2s;
+}
+
+.admin-resource-create:hover{
+    background-color: #a30401;
+}
+
+.admin-resource-controls-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30px;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.admin-resource-viewButton{
+    height: 50px;
+    width: 70px;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.admin-resource-controls-container-update{
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+}

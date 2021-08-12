@@ -1,0 +1,10 @@
+.pdfFrameContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pdfFrame{
+    width: 100%;
+    height: 100vh;
+}

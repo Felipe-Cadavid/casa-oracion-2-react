@@ -6,7 +6,7 @@ import Logo from '../../assets/Logo.png'
 
 import PeticionesList from '../../components/Admin/PeticionesList';
 import NewsController from '../../components/Admin/NewsController';
-import CursosController from '../../components/Admin/CursosController';
+import InstitutoController from '../../components/Admin/InstitutoController';
 function Admin(){
     const [tab, setTab] = React.useState('default');
 
@@ -35,7 +35,7 @@ function Admin(){
                 <NewsController/>
             }
             {tab === 'Instituto' &&
-                <CursosController />
+                <InstitutoController />
             }
         </main>
     </Layout>
