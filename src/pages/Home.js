@@ -13,7 +13,6 @@ import './styles/Home.css';
 
 function Home(){
     return(
-        <Layout>
             <main className="main">
                 
                 <VerseOfDay />
@@ -93,7 +92,6 @@ function Home(){
                     </div>
                 </section>
             </main>
-        </Layout>
     )
 }
 

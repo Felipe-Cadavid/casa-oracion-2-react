@@ -1,0 +1,35 @@
+.new-resource-container{
+    /* height: 400px; */
+    padding: 20px 0;
+    background-color: #8a0200;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.new-resource-form{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 80%;
+    font-weight: bold;
+    font-size: 25px;
+    gap: 10px;
+}
+
+.new-resource-input{
+    border-radius: 10px;
+    outline: none;
+}
+
+#cursos{
+    background-color: white;
+    height: 30px;
+}
+
+#resource-name{
+    height: 30px;
+}

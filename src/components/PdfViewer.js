@@ -1,13 +1,23 @@
+import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 import './styles/PdfViewer.css'
 
-function PdfViewer(pdf){
-    console.log('Este es el pdf ' + pdf.pdf);
+function PdfViewer({pdf, setViewingResource}){
+
+    const handleClick = () => {
+        setViewingResource(false);
+    }
+    
     return(
-        <div className="pdfFrameContainer">
-            <iframe className='pdfFrame' src={pdf.pdf} frameBorder="0"></iframe>
-        </div>
+        <>
+            <div onClick={handleClick} className="pdfViewer-back"><FontAwesomeIcon icon={faArrowCircleLeft}/> Volver</div>
+            <div className="pdfFrameContainer">
+                <iframe className='pdfFrame' src={pdf} frameBorder="0"></iframe>
+            </div>
+        </>
+        
     )
 }
 

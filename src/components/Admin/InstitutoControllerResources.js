@@ -5,6 +5,8 @@ import { faPen, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import getResources from '../../util/getResources';
 
+import InstitutoControllerNewResource from './InstitutoControllerNewResource';
+
 import Loader from '../Loader'
 
 import './styles/InstitutoControllerResources.css'
@@ -12,6 +14,8 @@ import './styles/InstitutoControllerResources.css'
 function InstitutoControllerResources(){
     const [loading, setLoading] = useState(true);
     const [resources, setResources] = useState([]);
+
+    const [creatingNewResource, setCreatingNewResource] = useState(false);
     
     useEffect(() => {
         getResources()
@@ -33,6 +37,17 @@ function InstitutoControllerResources(){
             })
     }, []);
 
+    const handleclick = e => {
+        switch (e.target.outerText) {
+            case 'Nuevo recurso':
+                setCreatingNewResource(true)
+                break;
+            default:
+                console.log('Error');
+                break;
+        }
+    }
+
 
     return(
         <>
@@ -40,9 +55,9 @@ function InstitutoControllerResources(){
                 <div className="loader-container">
                     <Loader />
                 </div>
-            :
+            : !creatingNewResource ?
                 <>
-                    <div className="admin-resource-create">Nuevo recurso</div>
+                    <div onClick={handleclick} className="admin-resource-create">Nuevo recurso</div>
 
                     {resources.map(resource => {
                         return(
@@ -65,6 +80,7 @@ function InstitutoControllerResources(){
                         )
                     })}
                 </>
+            : <InstitutoControllerNewResource setCreatingNewResource={setCreatingNewResource} />
             }
         </>
     )

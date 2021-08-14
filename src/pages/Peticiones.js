@@ -10,7 +10,7 @@ import './styles/Peticiones.css';
 
 function Peticiones(props){
     return(
-        <Layout>
+        <>
             {props.loading ? 
                 <main className="main">
                     <section className="request--loading">
@@ -55,8 +55,7 @@ function Peticiones(props){
                 </section>
             </main>
             }
-            
-        </Layout>
+        </>
     )
 }
 

@@ -24,11 +24,11 @@ function InstitutoController(){
         <div className="AdminInstitutoContainer">
             <aside className="AdminInstitutoAside">
                 <div ref={resourcesButton} onClick={handleclick} className="ResourcesButton">Recursos</div>
-                <div ref={otherButton} onClick={handleclick} className="ResourcesButton">Other button</div>
+                <div ref={otherButton} onClick={handleclick} className="ResourcesButton">Cursos</div>
             </aside>
             <div className="AdminInstitutoMain">
                 {selectedTab === "start" ?
-                    <div>Start</div>
+                    <div>Panel de control del instituto Bíblico</div>
                 
                 :
                 

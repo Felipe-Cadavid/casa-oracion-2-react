@@ -1,10 +1,13 @@
 .institute__resource-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
     background-color: #feca64;
     border: 1px solid black;
     box-sizing: border-box;
     padding: 10px;
+    gap: 20px;
 }
 
 .institute__resource-name{
@@ -15,6 +18,7 @@
 .institute__resource-meta-container{
     display: flex;
     gap: 5px;
+    justify-content: center;
 }
 
 .institute__resource-buttons-container{
@@ -28,4 +32,15 @@
     height: 50px;
     width: 180px;
     font-size: 30px;
+}
+
+@media only screen and (min-width: 1095px){
+    .institute__resource-section{
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .institute__resource-meta-container{
+        justify-content: flex-start;
+    }
 }

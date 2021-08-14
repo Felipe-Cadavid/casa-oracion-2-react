@@ -1,5 +1,4 @@
 .admin-resource-container{
-    /* height: 150px; */
     background-color: #8a0200;
     margin: 10px;
     border: 1px solid black;
@@ -8,10 +7,6 @@
     color: white;
     display: flex;
     justify-content: space-between;
-}
-
-.admin-resource-text-container{
-
 }
 
 .admin-resource-create{

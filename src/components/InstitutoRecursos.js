@@ -1,6 +1,7 @@
 import React from 'react';
 
 import getResources from '../util/getResources';
+import ImageViewer from './ImageViewer';
 import Loader from './Loader';
 import PdfViewer from './PdfViewer';
 
@@ -9,8 +10,9 @@ import './styles/InstitutoRecursos.css';
 function InstitutoRecursos(){
     const [resources, setResources] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
-    const [viewingPdf, setViewingPdf] = React.useState(false);
-    const [pdfUrl, setPdfUrl] = React.useState('');
+    const [viewingResource, setViewingResource] = React.useState(false);
+    const [resourceUrl, setResourceUrl] = React.useState('');
+    const [resourceType, setResourceType] = React.useState('');
 
     React.useEffect(() => {
         getResources()
@@ -35,27 +37,11 @@ function InstitutoRecursos(){
             })
     }, []);
 
-    function downloadPdf(pdf){
-
-    }
-
-    function handleClick(pdf, e){
-        switch (e.target.outerText) {
-            case 'Ver':
-                setPdfUrl(pdf);
-                setViewingPdf(true);
-                break;
-            case 'Descargar':
-                var xhr = new XMLHttpRequest();
-                xhr.responseType = 'blob';
-                xhr.onload = function(event) {
-                    var blob = xhr.response;
-                };
-                xhr.open('GET', pdf);
-                xhr.send();
-                break;
-            default:
-                break;
+    function handleClick(resourceUrl, resourceType, e){
+        if (e.target.outerText === 'Ver') {
+            setResourceUrl(resourceUrl);
+            setResourceType(resourceType);
+            setViewingResource(true);
         }
     }
 
@@ -66,7 +52,7 @@ function InstitutoRecursos(){
                     <Loader />
                 </div>
                 :
-                !viewingPdf ?
+                !viewingResource ?
                 resources.map(resource => {
                     return(
                         <section key={resource.id} className="institute__resource-section">
@@ -79,14 +65,15 @@ function InstitutoRecursos(){
                                 </div>
                             </div>
                             <div className="institute__resource-buttons-container">
-                                <button onClick={e => handleClick(resource.url, e)} type="button" className="institute__resource-view-button">Ver</button>
+                                <button onClick={e => handleClick(resource.url, resource.type, e)} type="button" className="institute__resource-view-button">Ver</button>
                             </div>
                             
                         </section>
                     )
                 })
-                :
-                <PdfViewer pdf={pdfUrl} />
+                : resourceType === 'pdf' ?
+                    <PdfViewer pdf={resourceUrl} setViewingResource={setViewingResource} />
+                :   <ImageViewer image={resourceUrl} setViewingResource={setViewingResource} />
             }
         </>
     )

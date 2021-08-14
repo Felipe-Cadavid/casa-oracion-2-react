@@ -1,14 +1,15 @@
 .AdminInstitutoContainer{
     width: 100vw;
+    min-height: 70vh;
     background-color: #feca64;
     border: 1px solid black;
-    height: 80vh;
     display: flex;
+    box-sizing: border-box;
 }
 
 .AdminInstitutoAside{
     width: 30%;
-    height: 100%;
+    height: auto;
     background-color: #c39a46;
     border-right: 1px solid black;
 }

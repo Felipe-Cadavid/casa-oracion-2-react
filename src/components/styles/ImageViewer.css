@@ -1,15 +1,4 @@
-.pdfFrameContainer{
-    width: 100%;
-    display: flex;
-    margin: auto;
-}
-
-.pdfFrame{
-    width: 100%;
-    height: 100vh;
-}
-
-.pdfViewer-back{
+.imageViewer-back{
     font-size: 40px;
     padding: 5px;
     align-self: baseline;
@@ -19,6 +8,15 @@
     cursor: pointer;
 }
 
-.pdfViewer-back:hover{
+.imageViewer-back:hover{
     color: #ddb056;
+}
+
+.imageViewer-container{
+    display: flex;
+    justify-content: center;
+}
+
+.imageViewer-image{
+    width: 100%;
 }

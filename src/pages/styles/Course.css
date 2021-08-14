@@ -3,10 +3,11 @@
 }
 
 .instituto__title{ 
-    width: 60vw;
+    width: 100vw;
     font-size: 40px;
     color: #feca64;
     font-style: italic;
+    text-align: center;
 }
 
 .instituto__nav-list{

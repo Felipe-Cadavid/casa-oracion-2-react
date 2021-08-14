@@ -2,7 +2,7 @@ import Database from "./Database";
 
 function getResources(){
     return new Promise((resolve, reject) => {
-        Database.collection("resources").orderBy('date', 'desc').get()
+        Database.collection("resources").orderBy('time', 'desc').get()
             .then(query => {
                 resolve(query.docs);
             })

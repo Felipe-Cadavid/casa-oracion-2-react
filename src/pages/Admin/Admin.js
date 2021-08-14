@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../components/Layout';
 
 import './styles/Admin.css'
 import Logo from '../../assets/Logo.png'
@@ -15,7 +14,6 @@ function Admin(){
     }
 
     return(
-    <Layout>
         <main className="main">
             <div className="admin-buttons-container">
                 <button onClick={handleClick} className="admin__button">Peticiones</button>
@@ -38,7 +36,6 @@ function Admin(){
                 <InstitutoController />
             }
         </main>
-    </Layout>
     );
 }
 
